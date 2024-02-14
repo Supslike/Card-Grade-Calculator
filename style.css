@@ -89,10 +89,6 @@ button:hover {
     padding: 1%;
 }
 
-.filler {
-    padding-bottom: 20vh;
-}
-
 table {
     width: 80%;
     border-collapse: collapse;
@@ -114,6 +110,7 @@ input {
     border: none;
     padding: 5%;
     color: black;
+    cursor: pointer;
 }
 
 .input-int {
@@ -124,6 +121,7 @@ input {
 
 input:focus {
     outline: none;
+    cursor:auto;
 }
 
 .input-text {
@@ -147,4 +145,37 @@ input:focus {
 
 #total-grade-label {
     font-weight: bold;
+}
+
+.incentives {
+    margin-top: 10vh;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    padding-bottom: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.incentives h2 {
+    font-size: 0.8in;
+    color: #094067;
+}
+
+.incentives input {
+    width: 30%;
+    height: 10vh;
+    font-size: 0.6in;
+    transition: all 0.3s;
+}
+
+
+.incentives input:focus {
+    border-bottom: rgba(205, 193, 193, 0.576) 5px solid;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }

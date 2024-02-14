@@ -5,6 +5,7 @@ var PROJECT_INDEX = 5;
 var ATTENDANCE_INDEX = 6;
 var EXAM_INDEX = 7;
 
+const INCENTIVES = document.getElementById("incentives");
 const QUIZ_TOTAL = document.getElementById("quiz-total");
 const RECITATION_TOTAL = document.getElementById("recitation-total");
 const LONGTEST_TOTAL = document.getElementById("longtest-total");
@@ -26,7 +27,14 @@ function FinalCalculate() {
     for (let i = 0; i < CATEGORIES.length; i++) {
         total_added_grades += Number(CATEGORIES[i].textContent.replace("%", ""));
     }
-    FINAL_GRADE.textContent = Math.round(total_added_grades) + "%";
+
+    if (Math.round(total_added_grades + Number(INCENTIVES.value)) <= 100) {
+        FINAL_GRADE.textContent = Math.round(total_added_grades + Number(INCENTIVES.value)) + "%";
+    }
+    else {
+        FINAL_GRADE.textContent = "100%";
+    }
+    
 }
 
 function AddRow(name, index, lister, total_element, percentage) {
@@ -36,6 +44,7 @@ function AddRow(name, index, lister, total_element, percentage) {
     var topic_name = document.createElement("th");
     var input_name = document.createElement("input");
     input_name.type = "text";
+    input_name.name = "Category Name";
     input_name.placeholder = `${name} ${lister.length + 1}`;
     var total_grade = document.createElement("th");
     total_grade.textContent = "100.00%";
@@ -48,6 +57,7 @@ function AddRow(name, index, lister, total_element, percentage) {
         var new_cell = document.createElement("th");
         var new_input = document.createElement("input");
         new_input.type = "number";
+        new_input.name = "Grade Input"
         new_input.min = 0;
         new_input.value = 5;
         new_row_list.push(new_input);
@@ -222,3 +232,5 @@ for (let i = 0; i < 2; i++) {
 }
 
 FinalCalculate();
+
+INCENTIVES.addEventListener("input", FinalCalculate);
