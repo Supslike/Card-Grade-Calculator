@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1st Semester Grade</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="grading-system-icon-isolated-background-vector-illustration_547674-815.avif" type="image/x-icon">
+</head>
+<body>
+    <div class="text-area">
+        <h1>Card Grading System</h1>
+        <p>This system is a dynamic grade calculator interface that enables users to input grades for various categories (quizzes, recitations, long tests, projects, attendance, and exams), calculates final grades based on the input, and provides warnings for incorrect grade inputs.</p>
+    </div>
+    <div class="button-holder">
+        <div class="button-container">
+            <button id="add-quiz">Add Quiz</button>
+            <button id="remove-quiz">Remove Quiz</button>
+        </div>
+        <div class="button-container">
+            <button id="add-recitation">Add Recitation</button>
+            <button id="remove-recitation">Remove Recitation</button>
+        </div>
+        <div class="button-container">
+            <button id="add-longtest">Add Long Test</button>
+            <button id="remove-longtest">Remove Long Test</button>
+        </div>
+        <div class="button-container">
+            <button id="add-project">Add Project</button>
+            <button id="remove-project">Remove Project</button>
+        </div>
+    </div>
+    <h2 id="warning"></h2>
+    <table border="1" id="main-card">
+        <tbody id="body-card">
+            <tr>
+                <th class="top-table">Category</th>
+                <th class="top-table">Weight (%)</th>
+                <th class="top-table">Grade (%)</th>
+                <th class="top-table">Total Grade</th>
+            </tr>
+            <tr>
+                <td colspan="3" class="category">Quiz 10%</td>
+                <td class="category percentage" id="quiz-total">10.00%</td>
+            </tr>
+            <tr>
+                <td colspan="3" class="category">Recitation 15%</td>
+                <td class="category percentage" id="recitation-total">15.00%</td>
+            </tr>
+            <tr>
+                <td colspan="3" class="category">Long Test 15%</td>
+                <td class="category percentage" id="longtest-total">15.00%</td>
+            </tr>
+            <tr>
+                <td colspan="3" class="category">Project 35%</td>
+                <td class="category percentage" id="project-total">35.00%</td>
+            </tr>
+            <tr>
+                <td colspan="3" class="category">Attendance 5%</td>
+                <td class="category percentage" id="attendance-total">5.00%</td>
+            </tr>
+            <tr>
+                <td>Attendance</td>
+                <td><input id="attendance-max" type="number" placeholder="5"></td>
+                <td><input id="attendance-score" type="number" placeholder="5"></td>
+                <td id="attendance-grade">100.00%</td>
+            </tr>
+            <tr>
+                <td colspan="3" class="category">Exam 20%</td>
+                <td class="category percentage" id="exam-total">20.00%</td>
+            </tr>
+            <tr>
+                <td>Exam</td>
+                <td><input id="exam-max" type="number" placeholder="5"></td>
+                <td><input id="exam-score" type="number" placeholder="5"></td>
+                <td id="exam-grade">100.00%</td>
+            </tr>
+            <tr class="final-grade">
+                <td colspan="3" id="total-grade-label">Total Grade</td>
+                <td id="final-grade">100.00%</td>
+            </tr>
+        
+        </tbody>
+    </table> 
+    <div class="filler"></div>   
+    <script src="script.js"></script>
+</body>
+</html>
