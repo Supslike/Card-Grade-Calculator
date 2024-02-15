@@ -22,6 +22,12 @@ var LIST_RECITATION = [];
 var LIST_LONGTEST = [];
 var LIST_PROJECT = [];
 
+function limitNumberLength(input, maxLength) {
+    if (input.value.length > maxLength) {
+        input.value = input.value.slice(0, maxLength);
+    }
+}
+
 function FinalCalculate() {
     let total_added_grades = 0;
     for (let i = 0; i < CATEGORIES.length; i++) {

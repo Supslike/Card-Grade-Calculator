@@ -30,7 +30,12 @@
             <button id="remove-project">Remove Project</button>
         </div>
     </div>
-    <h2 id="warning"></h2>
+    <div class="info-holder">
+        <label for="student-name">Student Name: </label>
+        <input type="text" name="student-name" class="student-info">
+        <label for="student-id">Student Number: </label> 
+        <input type="number" oninput="limitNumberLength(this, 15)" name="student-id" class="student-info">
+    </div>
     <table border="1" id="main-card">
         <tbody id="body-card">
             <tr>

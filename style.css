@@ -113,6 +113,29 @@ input {
     cursor: pointer;
 }
 
+.student-info {
+    width: auto;
+    height: auto;
+    text-align: left;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    padding: 5px;
+    font-size: 30px;
+    text-indent: 10px;
+    text-transform: capitalize;
+}
+
+.info-holder {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    font-size: 30px;
+    font-weight: bold;
+}
+
 .input-int {
     text-align: center;
     font-size: 17px;
